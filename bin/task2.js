@@ -8,7 +8,6 @@ const getMenCountByYear = (arr) => {
   const newArr = arr.filter((element) => element.gender === 'male');
   return newArr.reduce((acc, element) => {
     const key = _.get(element, 'birthday').slice(0, 4);
-    // console.log(key);
     if (!Object.hasOwn(acc, key)) {
       acc[key] = 0;
     }
